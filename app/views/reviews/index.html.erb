@@ -1,0 +1,9 @@
+<%= link_to "Create new review", new_restaurant_review_path(@restaurant) %>
+
+<ul>
+  <% @reviews.each do |r| %>
+  <li>
+    <%= "#{r.content} | Stars: #{r.rating} for Restaurant: #{r.restaurant.name}" %>
+  </li>
+  <% end %>
+</ul>

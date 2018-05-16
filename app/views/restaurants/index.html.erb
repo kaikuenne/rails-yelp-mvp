@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div class="container">
+    <ul class="list-group" style="list-style-type: none;">
+      <% @restaurants.each do |r| %>
+      <div class="row">
+        <li class="btn btn-light">
+          <%= link_to "#{r.name} (#{r.category}) | #{r.address} | #{r.phone_number}", restaurant_path(r.id) %>
+          <%= link_to "Create new review", new_restaurant_review_path(r) %>
+        </li>
+      </div>
+      <% end %>
+    </ul>
+  </div>
+</div>

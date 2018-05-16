@@ -1,0 +1,8 @@
+<%= "#{@restaurant.name} (#{@restaurant.category}) | #{@restaurant.address} | #{@restaurant.phone_number}" %>
+<br>
+
+
+<% @restaurant.reviews.each do |review| %>
+  <%= review.content %>
+<% end %>
+<%= link_to "Show reviews", restaurant_reviews_path(@restaurant) %>
